@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "BlogsList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@using CoffeSite.Models;
+@model  List<Blog>
+
+<h2>BlogsList</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover portfolio">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Maincontent</th>
+                        <th>Content</th>
+                        <th>Date</th>
+                        <th>Photo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.BlogsID</td>
+                        <td>@item.BlogsTitle</td>
+                        <td>@item.BlogsMain</td>
+                        <td>@item.BlogsContent</td>
+                        <td>@item.BlogsDate</td>
+                        <td class="tchr-td-img">
+                            <div>
+                                @*<img style="width:50px;" src="~/Content/CoffeePhoto/@Model[0].BlogsPhoto" alt="website template image" class="img-fluid">*@
+                                @*<img style="width:50px;" src="~/Content/CoffeePhoto/@item.BlogsPhoto" />*@
+                                <img style="width:50px;" src="~/Content/CoffeePhoto/@item.BlogsPhoto" alt="website template image" />
+
+                            </div>
+                        </td>
+                        <td style='width: 105px; ' class='text-center'><a href="../../Admin/BlogEdit/@item.BlogsID"><i style='margin: 0px 10px; font-size:18px; ' class='fa fa-pencil'></i></a></td>
+                        <td style='width: 105px;' class='text-center'><a href="../../Admin/BlogDelete/@item.BlogsID"><i style='margin: 0px 10px; font-size:18px;' class='fa fa-trash-o'></i></a></td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

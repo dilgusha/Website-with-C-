@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Categori";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="container">
+        <div class="panel-body">
+            <form action="~/Admin/Categori" method="post" style="width:88%;" enctype="multipart/form-data">
+                <div class="form-group col-md-3">
+                    <label>Ad</label>
+                    <input name="CategoriaName" value="" type="text" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-success" Text="Gonder" style="margin:25px; width:70px; height:35px; color:#fff;">Gonder</button>
+            </form>
+        </div>
+    </div>
+</div>
+

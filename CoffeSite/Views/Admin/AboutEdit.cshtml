@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "AboutEdit";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@using CoffeSite.Models
+@model List<About>
+<div class="panel panel-default">
+    <div class="container">
+        <div class="panel-body">
+            <form action="~/Admin/AboutEdit/@Model[0].AboutID" method="post" style="width:88%;" enctype="multipart/form-data">
+                <div class="form-group col-md-3">
+                    <label>Name</label>
+                    <input name="AboutTitle" value="@Model[0].AboutTitle" type="text" class="form-control" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Surname</label>
+                    <input name="AboutContent" value="@Model[0].AboutContent" type="text" class="form-control" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Surname</label>
+                    <input name="AboutPhoto" value="@Model[0].AboutPhoto" type="file" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-success" Text="Gonder" style="margin:25px; width:70px; height:35px; color:#fff;">Gonder</button>
+            </form>
+        </div>
+    </div>
+</div>
+

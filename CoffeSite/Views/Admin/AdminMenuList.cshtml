@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "AdminMenuList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Contact List
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Content</th>
+                        <th>Price</th>
+                        <th>ID</th>
+                        <th>Photo</th>
+
+                        <th>CategoriId</th>
+                        <th>Categori</th>
+                        <th class="text-center" vro><a href="~/Admin/AdminMenu"><i class="fa fa-plus fa-2x"></i></a></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.SweetsId
+                        <td>@item.SweetsName
+                        <td>@item.SweetsContent
+                        <td>@item.SweetsPrice
+                        <td>@item.SweetsPhoto
+                        <td>@item.SweetsCategoriaId
+                        <td>@item.CategoriaName
+                        <td style='width: 105px; ' class='text-center'><a href="../../Admin/EditMenu1/@item.SweetsId"><i style='margin: 0px 10px; font-size:18px; ' class='fa fa-pencil'></i></a></td>
+                        <td style='width: 105px;' class='text-center'><a href="../../Admin/DeleteMenuList/@item.SweetsId"><i style='margin: 0px 10px; font-size:18px;' class='fa fa-trash-o'></i></a></td>
+                    </tr>
+}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

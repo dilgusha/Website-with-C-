@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@using CoffeSite.Models;
+@model  List<About>
+
+<h2 style="color:#000; font-weight:600;margin-bottom:50px;">
+    About
+</h2>
+<div class="ABOUT">
+
+    <form action="~/Admin/About" method="post" enctype="multipart/form-data">
+        <div class="form-group col-md-3">
+            <label>Title</label>
+            <input runat="server" id="title" type="text" class="form-control" name="AboutTitle" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Text</label>
+            <textarea required autocomplete="on" style="width: 230px; height: 100px;" runat="server" class="form-control" rows="3" id="text" name="AboutContent"></textarea>
+        </div>
+        <div class="form-group col-md-3">
+            <label>Photo</label>
+            <input name="AboutPhoto" type="file" class="form-control" required autocomplete="on" />
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-top:20px;">Change Button</button>
+    </form>
+</div>
+<style>
+    .ABOUT input {
+        width: 230px;
+        height: 100px;
+    }
+</style>
+

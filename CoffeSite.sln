@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeSite", "CoffeSite\CoffeSite.csproj", "{97BB78C4-F08E-422E-84C6-647F5667E8FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97BB78C4-F08E-422E-84C6-647F5667E8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BB78C4-F08E-422E-84C6-647F5667E8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BB78C4-F08E-422E-84C6-647F5667E8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BB78C4-F08E-422E-84C6-647F5667E8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BBA381F-6C5D-4B8A-BA2B-2538C1A7E76B}
+	EndGlobalSection
+EndGlobal

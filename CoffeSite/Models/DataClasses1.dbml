@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CoffeeSite" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-K1MDKNV\SQLEXPRESS;Initial Catalog=CoffeeSite;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CoffeeSiteConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.About" Member="Abouts">
+    <Type Name="About">
+      <Column Name="AboutID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AboutTitle" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="AboutContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AboutPhoto" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Blogs" Member="Blogs">
+    <Type Name="Blog">
+      <Column Name="BlogsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BlogsTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BlogsMain" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BlogsDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BlogsContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BlogsPhoto" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="StaffID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaffName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="StaffJob" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="StaffPhoto" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StaffFacebook" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="StaffInstagram" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="StaffLinkedin" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gallery" Member="Galleries">
+    <Type Name="Gallery">
+      <Column Name="GalleryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GalleryPhoto" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contact" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="ContactID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="ContactMessage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reservation" Member="Reservations">
+    <Type Name="Reservation">
+      <Column Name="RsrvtnID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RsrvtnName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="RsrvtnPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="RsrvtnDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RsrvtnTime" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="RsrvtnMessage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Info" Member="Infos">
+    <Type Name="Info">
+      <Column Name="InfoID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InfoPlace" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InfoPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="InfoEmail" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="InfoFacebook" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InfoInstagram" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InfoWhatsapp" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InfoOpenHours1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InfoOpenHours2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Umumi" Member="Umumis">
+    <Type Name="Umumi">
+      <Column Name="SweetsId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SweetsName" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SweetsContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SweetsPrice" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SweetsPhoto" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SweetsCategoriaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoriaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoriaName" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sweets" Member="Sweets">
+    <Type Name="Sweet">
+      <Column Name="SweetsId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SweetsName" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="SweetsContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SweetsPrice" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SweetsPhoto" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SweetsCategoriaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categoria" Member="Categorias">
+    <Type Name="Categoria">
+      <Column Name="CategoriaId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoriaName" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comment" Member="Comments">
+    <Type Name="Comment">
+      <Column Name="CommentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CommentName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CommentEmail" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="CommentMessage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CommentBlogsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetailView" Member="DetailViews">
+    <Type Name="DetailView">
+      <Column Name="BlogsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BlogsTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="BlogsMain" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BlogsDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BlogsContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BlogsPhoto" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CommentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CommentName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CommentEmail" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="CommentMessage" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CommentBlogsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLogin" Member="UserLogins">
+    <Type Name="UserLogin">
+      <Column Name="UserLoginId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Userpassword" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

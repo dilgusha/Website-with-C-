@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="~/Content/user.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="sidenav">
+        <div class="login-main-text">
+            <h2>Application<br> Login Page</h2>
+            <p>Login or register from here to access.</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+                <form action="~/User/Pass" method="post"  enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" class="form-control" placeholder="UserName" name="Username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password" name="Userpassword">
+                    </div>
+                    <button type="submit" class="btn btn-black">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

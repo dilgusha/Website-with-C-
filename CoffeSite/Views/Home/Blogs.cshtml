@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Blogs";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+@using CoffeSite.Models;
+@model  List<Blog>
+
+<div class="blog" id="blog" style="margin-top:100px;">
+    <h2 style="text-align: center; font-size: 50px;line-height: 30px;  color: #DB9A64; margin-bottom: 40px;">
+        Food Blog
+    </h2>
+    @foreach (var item in Model)
+    {
+
+        <div class="col-md-6">
+            <img src="~/Content/CoffeePhoto/@item.BlogsPhoto" alt="website template image" />
+            <div class="pabsolute">
+                <h2 style="font-size: 30px; color: #BB8151;">
+                    @item.BlogsTitle
+                </h2>
+                <div class="blog-meta">
+                    <p><i class="far fa-comment"></i>Comment</p>
+                    <p style="margin-left:15px;"><i class="far fa-list-alt"></i>Coffee</p>
+                </div>
+                <p style="margin-bottom:30px;">
+                    @item.BlogsMain
+                </p>
+                <a href="Blog/@item.BlogsID">Read More</a>
+            </div>
+        </div>
+    }
+        @*<div class="col-md-6">
+                <img src="~/Content/CoffeePhoto/coffeephoto-1.jpg" alt="website template image" />
+                <div class="pabsolute">
+                    <div class="blog-meta">
+                        <p><i class="far fa-user"></i>Admin</p>
+                        <p style="margin-left:15px;"><i class="far fa-list-alt"></i>Food</p>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis necessitatibus, est soluta
+                        dolorem tempore enim consectetur consequuntur illum numquam corporis fugit temporibus
+                        impedit non nihil excepturi, optio minima blanditiis architecto!
+                    </p>
+                    <a href="~/Home/Blog">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Content/CoffeePhoto/coffeephoto-1.jpg" alt="website template image" />
+                <div class="pabsolute">
+                    <div class="blog-meta">
+                        <p><i class="far fa-user"></i>Admin</p>
+                        <p style="margin-left:15px;"><i class="far fa-list-alt"></i>Food</p>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis necessitatibus, est soluta
+                        dolorem tempore enim consectetur consequuntur illum numquam corporis fugit temporibus
+                        impedit non nihil excepturi, optio minima blanditiis architecto!
+                    </p>
+                    <a href="~/Home/Blog">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Content/CoffeePhoto/coffeephoto-1.jpg" alt="website template image" />
+                <div class="pabsolute">
+                    <div class="blog-meta">
+                        <p><i class="far fa-user"></i>Admin</p>
+                        <p style="margin-left:15px;"><i class="far fa-list-alt"></i>Food</p>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis necessitatibus, est soluta
+                        dolorem tempore enim consectetur consequuntur illum numquam corporis fugit temporibus
+                        impedit non nihil excepturi, optio minima blanditiis architecto!
+                    </p>
+                    <a href="~/Home/Blog">Read More</a>
+                </div>
+            </div>*@
+    </div>
+

@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Info";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+@using CoffeSite.Models;
+@model  List<Info>
+
+<h2 style="color:#000; font-weight:600;margin-bottom:50px;">
+    Info
+</h2>
+<div class="ABOUT">
+    <form action="~/Admin/Info" method="post">
+        <div class="form-group col-md-3">
+            <label>Place</label>
+            <input runat="server" id="title" type="text" class="form-control" name="InfoPlace" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Phone</label>
+            <input runat="server" id="title" type="text" class="form-control" name="InfoPhone" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Email</label>
+            <input runat="server" id="title" type="email" class="form-control" name="InfoEmail" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Facebook</label>
+            <input runat="server" id="title" type="text" class="form-control" name="InfoFacebook" required autocomplete="on" />
+        </div>
+
+        <div class="form-group col-md-3">
+            <label>Instagram</label>
+            <input runat="server" id="title" type="text" class="form-control" name="InfoInstagram" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Whatsapp</label>
+            <input name="InfoWhatsapp" type="text" class="form-control" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>OpenHours1</label>
+            <input name="InfoOpenHours1" type="text" class="form-control" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>OpenHours2</label>
+            <input name="InfoOpenHours2" type="text" class="form-control" required autocomplete="on" />
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-top:20px;">Change Button</button>
+    </form>
+</div>
+

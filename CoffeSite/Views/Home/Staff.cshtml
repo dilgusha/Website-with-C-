@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "Staff";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+@using CoffeSite.Models;
+@model  List<Staff>
+
+<div class="staffintitle" id="staff" style="margin-top: 100px; width:100%;">
+
+    <h2 style="text-align: center; font-size: 50px;  color: #DB9A64; margin-bottom: 40px;">
+        Our Staff
+    </h2>
+
+    <div class="staff">
+        @foreach (var item in Model)
+        {
+            <div class="staffindiv">
+                <img style="width:360px; height:360px;" src="~/Content/CoffeePhoto/@item.StaffPhoto" />
+                <ul class="social">
+                    <li><a href="@item.StaffFacebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="@item.StaffInstagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="@item.StaffLinkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+                <div class="team-content">
+                    <h3 class="title">@item.StaffName</h3>
+                    <span class="post">@item.StaffJob</span>
+                </div>
+            </div>
+
+            @*<div class="staffindiv">
+                    <img src="~/Content/CoffeePhoto/staff-1.jpg" />
+                    <ul class="social">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <div class="team-content">
+                        <h3 class="title">Casandra</h3>
+                        <span class="post">Chef</span>
+                    </div>
+                </div>
+                <div class="staffindiv">
+                    <img src="~/Content/CoffeePhoto/staff-1.jpg" />
+                    <ul class="social">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <div class="team-content">
+                        <h3 class="title">Casandra</h3>
+                        <span class="post">Chef</span>
+                    </div>
+                </div>
+                <div class="staffindiv">
+                    <img src="~/Content/CoffeePhoto/staff-1.jpg" />
+                    <ul class="social">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <div class="team-content">
+                        <h3 class="title">Casandra</h3>
+                        <span class="post">Chef</span>
+                    </div>
+                </div>
+                <div class="staffindiv">
+                    <img src="~/Content/CoffeePhoto/staff-1.jpg" />
+                    <ul class="social">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <div class="team-content">
+                        <h3 class="title">Casandra</h3>
+                        <span class="post">Chef</span>
+                    </div>
+                </div>
+                <div class="staffindiv">
+                    <img src="~/Content/CoffeePhoto/staff-1.jpg" />
+                    <ul class="social">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <div class="team-content">
+                        <h3 class="title">Casandra</h3>
+                        <span class="post">Chef</span>
+                    </div>
+                </div>*@
+
+        }
+
+    </div>
+
+</div>
+

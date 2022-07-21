@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "EditMenu1";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+@using CoffeSite.Models;
+@model  Sweet
+
+<div class="container">
+    <form action="~/Admin/EditMenu1/@Model.SweetsId" method="post" enctype="multipart/form-data">
+        <div class="form-group col-md-3">
+            <label>Name</label>
+            <input name="SweetsName" value="@Model.SweetsName" type="text" class="form-control" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Surname</label>
+            <input name="SweetsContent" value="@Model.SweetsContent" type="text" class="form-control" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Surname</label>
+            <input name="SweetsPrice" value="@Model.SweetsPrice" type="text" class="form-control" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Photo</label>
+            <input name="SweetsPhoto" value="@Model.SweetsPhoto" accept="image/*" type="file" class="form-control" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="sel1">Kateqoriyani secin</label>
+            <select class="form-control" id="sel1" name="SweetsCategoriaId" value="">
+                <option disabled selected value="-1">Kateqoriyani secin</option>
+                @foreach (var item in ViewBag.Categoria)
+                {
+                    <option @(Model.SweetsCategoriaId == item.CategoriaId ? "selected" : " ") value="@item.CategoriaId">@item.CategoriaName</option>
+}
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success" Text="Gonder" style="margin:25px;">Add</button>
+    </form>
+</div>
+

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "StaffAdmin";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+@using CoffeSite.Models;
+@model  List<Staff>
+
+<h2 style="color:#000; font-weight:600;margin-bottom:50px;">
+    Staffs
+</h2>
+<div class="ABOUT">
+    <form action="~/Admin/StaffAdmin" method="post">
+        <div class="form-group col-md-3">
+            <label>Name</label>
+            <input runat="server" id="title" type="text" class="form-control" name="StaffName" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Job</label>
+            <input runat="server" id="title" type="text" class="form-control" name="StaffJob" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Facebook</label>
+            <input runat="server" id="title" type="text" class="form-control" name="StaffFacebook" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Instagram</label>
+            <input runat="server" id="title" type="text" class="form-control" name="StaffInstagram" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Linkedin</label>
+            <input runat="server" id="title" type="text" class="form-control" name="StaffLinkedin" required autocomplete="on" />
+        </div>
+        <div class="form-group col-md-3">
+            <label>Photo</label>
+            <input name="StaffPhoto" type="file" class="form-control" required autocomplete="on" />
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-top:20px;">Change Button</button>
+    </form>
+</div>
+<style>
+    .ABOUT input {
+        width: 230px;
+        height: 100px;
+    }
+</style>
+
+

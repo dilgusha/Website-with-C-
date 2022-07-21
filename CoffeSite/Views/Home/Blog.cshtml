@@ -1,0 +1,159 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+@using CoffeSite.Models;
+@model  List<DetailView>
+
+
+<div class="entryall">
+    <div class="blogol">
+        <div class="backtopi" style="display: flex;">
+            <a href="~/Home/Blogs">
+                <i class="fas fa-angle-double-left"></i>
+                <p>Blog səhifəsinə qayıt</p>
+            </a>
+        </div>
+    </div>
+    <div class="colall">
+        <div class="col-md-7">
+            <img style="width:600px;" src="~/Content/CoffeePhoto/@Model[0].BlogsPhoto" alt="website template image" />
+            <div class="entry-main">
+                <h3 class="title entry-title">@Model[0].BlogsTitle</h3>
+                <div class="entry-meta">
+                    Prepared <a href="#" class="entry-meta-author">@Model[0].BlogsDate</a>
+                </div>
+                <div class="entry-content">
+                    <blockquote>@Model[0].BlogsMain</blockquote>
+                    <p>@Model[0].BlogsContent</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div id="comments" class="comments-area">
+                <h3 class="title comment-title" style="margin-bottom:20px;">Comments</h3>
+                <ol class="comment-list">
+                    
+                    <li class="comment">
+                        <article class="comment-body">
+                            <div class="comment-avatar">
+                                <img alt="" src="~/Content/ProfielPhoto/profilphoto-1.png">
+                            </div>
+                            <div class="comment-main">
+                                <h5 class="title"><a href="#" class="comment-name">@Model[0].CommentName</a></h5>
+                                <div class="comment-date">Posted: March 25, 2015, 12:00 am</div>
+                                <div class="comment-content">
+                                    <p>@Model[0].CommentMessage</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <ol class="children">
+                            <li class="comment">
+                                <article class="comment-body">
+                                    <div class="comment-avatar">
+                                        <img alt="" src="~/Content/ProfielPhoto/profilphoto-2.png">
+                                    </div>
+                                    <div class="comment-main">
+                                        <h5 class="title"><a href="#" class="comment-name">Franklin</a></h5>
+                                        <div class="comment-date">Posted: March 25, 2015, 12:00 am</div>
+                                        <div class="comment-content">
+                                            <p>Thanks you for this awesome ullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                                        </div>
+                                        <div class="comment-reply"><a href="#">Reply</a></div>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="comment">
+                                <article class="comment-body">
+                                    <div class="comment-avatar">
+                                        <img alt="" src="~/Content/ProfielPhoto/profilphoto-1.png">
+                                    </div>
+                                    <div class="comment-main">
+                                        <h5 class="title"><a href="#" class="comment-name">Franklin</a></h5>
+                                        <div class="comment-date">Posted: March 25, 2015, 12:00 am</div>
+                                        <div class="comment-content">
+                                            <p>Thanks you for this awesome ullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                                        </div>
+                                        <div class="comment-reply"><a href="#">Reply</a></div>
+                                    </div>
+                                </article>
+                            </li>
+                        </ol>
+
+                    </li>
+
+                    @*<li class="comment">
+                        <article class="comment-body">
+                            <div class="comment-avatar">
+                                <img alt="" src="~/Content/ProfielPhoto/profilphoto-1.png">
+                            </div>
+                            <div class="comment-main">
+                                <h5 class="title"><a href="#" class="comment-name">Franklin</a></h5>
+                                <div class="comment-date">Posted: March 25, 2015, 12:00 am</div>
+                                <div class="comment-content">
+                                    <p>Thanks you for this awesome ullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                                </div>
+                                <div class="comment-reply"><a href="#">Reply</a></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="comment">
+                        <article class="comment-body">
+                            <div class="comment-avatar">
+                                <img alt="" src="~/Content/ProfielPhoto/profilphoto-1.png">
+                            </div>
+                            <div class="comment-main">
+                                <h5 class="title"><a href="#" class="comment-name">Franklin</a></h5>
+                                <div class="comment-date">Posted: March 25, 2015, 12:00 am</div>
+                                <div class="comment-content">
+                                    <p>Thanks you for this awesome ullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                                </div>
+                                <div class="comment-reply"><a href="#">Reply</a></div>
+                            </div>
+                        </article>
+                    </li>*@
+
+                </ol>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="commentform">
+        <div class="col-md-6">
+            <h3 class="title comment-title" id="reply-title">Post a comment</h3>
+            <form action="~/Home/Blog/@Model[0].BlogsID" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter name" name="CommentName" style="font-size: 14px;">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="CommentEmail" style="font-size: 14px;">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Message:</label>
+                    <textarea style="height: 150px; font-size: 14px;" class="form-control" id="textarea"
+                              name="CommentMessage" placeholder="Enter Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="privatebutton"
+                            style="border:1px solid;border-color: #DB9A64;border-radius: 2px; background-color: #fff; height: 40px; width: 140px;">
+                        Post a comment
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <img src="~/Content/CoffeePhoto/@Model[0].BlogsPhoto" alt="website template image" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+

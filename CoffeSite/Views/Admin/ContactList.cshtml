@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "ContactList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ContactList</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover portfolio">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.ContactID</td>
+                        <td>@item.ContactName</td>
+                        <td>@item.ContactEmail</td>
+                        <td>@item.ContactMessage</td>
+
+                        <td style='width: 105px;' class='text-center'><a href="../../Admin/ContactDelete/@item.ContactID"><i style='margin: 0px 10px; font-size:18px;' class='fa fa-trash-o'></i></a></td>
+
+
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

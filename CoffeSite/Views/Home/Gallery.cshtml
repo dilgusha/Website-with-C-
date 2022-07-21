@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+@using CoffeSite.Models;
+@model  List<Gallery>
+
+<div class="galleryintitle" id="gallery" style="width:100%;">
+    <h2 style="text-align: center; font-size: 50px;line-height: 30px;  color: #DB9A64; margin-bottom: 40px;">
+        Gallery
+    </h2>
+    <div class="gallery">
+        @foreach (var item in Model)
+        {
+            <div class="galleryindiv">
+                <img style="width:360px; height:300px;" src="~/Content/CoffeePhoto/@item.GalleryPhoto">
+            </div>
+        }
+    </div>
+</div>
+

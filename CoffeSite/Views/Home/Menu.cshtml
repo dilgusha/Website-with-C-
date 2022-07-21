@@ -1,0 +1,218 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+<div class="allagfsdcx" id="menu" style="margin-top:100px; text-align:center;">
+    <h2 style="text-align: center; font-size: 50px;line-height: 30px;  color: #DB9A64; margin-bottom: 40px;">
+        Menu
+    </h2>
+    <div class="filter-sticky">
+        <div id="filter1" class="filter">
+            <button class="button button-active" data-filter="">All</button>
+            <button class="button" data-filter=".1">Hot Drinks</button>
+            <button class="button" data-filter=".2">Cold Drinks</button>
+            <button class="button" data-filter=".3">Sweets</button>
+        </div>
+    </div>
+    <div class="agfsdcx">
+        @foreach (var item in ViewBag.Umumi)
+        {
+            <div class="deliciousone">
+
+
+                <div class="menuone" id="@item.CategoriaId">
+                    <img src="~/Content/CoffeePhoto/@item.SweetsPhoto"
+                         style="width: 250px;height: 210px; text-align: center;">
+                    <div class="drinks">
+                        <h2 class="h3">@item.SweetsName</h2>
+                        <span class="fh5co-price">@item.SweetsPrice</span>
+                        <p>
+                            @item.SweetsContent
+                        </p>
+                    </div>
+                </div>
+
+                @*<div class="menutwo">
+                    <img src="https://preview.colorlib.com/theme/delicious/img/bg-img/xr3.jpg.pagespeed.ic.WOJgHD7Wvr.webp"
+                         style="width: 250px;height: 210px;">
+                    <div class="drinks">
+                        <h2 class="h3">Vegan Smoothie</h2>
+                        <span class="fh5co-price">$20<sup>.50</sup></span>
+                        <p>
+                            You can be successful.&nbsp;You can have a busy cafe, restaurant, or
+                            business
+                            that
+                            serves
+                            amazing coffee to
+                            the community that supports you. If you value exceptional coffee and
+                            service,&nbsp;we at
+                            Quills want to partner
+                            with you to help fine-tune your hospitality efforts and coffee program
+                            so you
+                            can do
+                            just
+                            that.&nbsp;
+                        </p>
+                    </div>
+                </div>*@
+
+            </div>
+        }
+
+        @*<div class="delicioustwo">
+            <div class="menuone">
+                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F12%2F16%2Fvegan-flourless-choc-cake-1244.jpg&q=85"
+                     style="width: 250px;height: 210px;">
+                <div class="drinks">
+                    <h2 class="h3">Healthy Fruit Desert </h2>
+                    <span class="fh5co-price">$20<sup>.50</sup></span>
+
+                    <p>
+                        You can be successful.&nbsp;You can have a busy cafe, restaurant, or
+                        business
+                        that
+                        serves
+                        amazing coffee to
+                        the community that supports you. If you value exceptional coffee and
+                        service,&nbsp;we at
+                        Quills want to partner
+                        with you to help fine-tune your hospitality efforts and coffee program
+                        so you
+                        can do
+                        just
+                        that.&nbsp;
+                    </p>
+                </div>
+            </div>
+
+            <div class="menutwo">
+                <img src="https://preview.colorlib.com/theme/delicious/img/bg-img/xr6.jpg.pagespeed.ic.rgfgmTjBnu.webp"
+                     style="width: 250px;height: 210px;">
+                <div class="drinks">
+                    <h2 class="h3">Healthy Fruit Desert </h2>
+                    <span class="fh5co-price">$20<sup>.50</sup></span>
+
+                    <p>
+                        You can be successful.&nbsp;You can have a busy cafe, restaurant, or
+                        business
+                        that
+                        serves
+                        amazing coffee to
+                        the community that supports you. If you value exceptional coffee and
+                        service,&nbsp;we at
+                        Quills want to partner
+                        with you to help fine-tune your hospitality efforts and coffee program
+                        so you
+                        can do
+                        just
+                        that.&nbsp;
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="deliciousone">
+            <div class="menuone">
+                <img src="https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta1.jpg.pagespeed.ic.Gv_TFTVMhv.webp"
+                     style="width: 250px;height: 210px;">
+                <div class="drinks">
+                    <h2 class="h3">Salted Fried Chicken</h2>
+                    <span class="fh5co-price">$20<sup>.50</sup></span>
+                    <p>
+                        You can be successful.&nbsp;You can have a busy cafe, restaurant, or
+                        business
+                        that
+                        serves
+                        amazing coffee to
+                        the community that supports you. If you value exceptional coffee and
+                        service,&nbsp;we at
+                        Quills want to partner
+                        with you to help fine-tune your hospitality efforts and coffee program
+                        so you
+                        can do
+                        just
+                        that.&nbsp;
+                    </p>
+                </div>
+            </div>
+
+            <div class="menutwo">
+                <img src="https://preview.colorlib.com/theme/delicious/img/bg-img/xinsta1.jpg.pagespeed.ic.Gv_TFTVMhv.webp"
+                     style="width: 250px; height: 210px;">
+                <div class="drinks">
+                    <h2 class="h3">Salted Fried Chicken</h2>
+                    <span class="fh5co-price">$20<sup>.50</sup></span>
+                    <p>
+                        You can be successful.&nbsp;You can have a busy cafe, restaurant, or
+                        business
+                        that
+                        serves
+                        amazing coffee to
+                        the community that supports you. If you value exceptional coffee and
+                        service,&nbsp;we at
+                        Quills want to partner
+                        with you to help fine-tune your hospitality efforts and coffee program
+                        so you
+                        can do
+                        just
+                        that.&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="delicioustwo">
+            <div class="menuone">
+                <img src="https://www.asweetpeachef.com/wp-content/uploads/2017/05/high-protein-fruit-smoothie-recipes-square.jpg"
+                     style="width: 250px;height: 210px;">
+                <div class="drinks">
+                    <h2 class="h3">Healthy Fruit Desert</h2>
+                    <span class="fh5co-price">$20<sup>.50</sup></span>
+
+                    <p>
+                        You can be successful.&nbsp;You can have a busy cafe, restaurant, or
+                        business
+                        that
+                        serves
+                        amazing coffee to
+                        the community that supports you. If you value exceptional coffee and
+                        service,&nbsp;we at
+                        Quills want to partner
+                        with you to help fine-tune your hospitality efforts and coffee program
+                        so you
+                        can do
+                        just
+                        that.&nbsp;
+                    </p>
+                </div>
+            </div>
+
+            <div class="menutwo">
+                <img src="https://www.asweetpeachef.com/wp-content/uploads/2017/05/high-protein-fruit-smoothie-recipes-square.jpg"
+                     style="width: 250px;height: 210px;">
+                <div class="drinks">
+                    <h2 class="h3">Healthy Fruit Desert</h2>
+                    <span class="fh5co-price">$20<sup>.50</sup></span>
+
+                    <p>
+                        You can be successful.&nbsp;You can have a busy cafe, restaurant, or
+                        business
+                        that
+                        serves
+                        amazing coffee to
+                        the community that supports you. If you value exceptional coffee and
+                        service,&nbsp;we at
+                        Quills want to partner
+                        with you to help fine-tune your hospitality efforts and coffee program
+                        so you
+                        can do
+                        just
+                        that.&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>*@
+    </div>
+</div>
+

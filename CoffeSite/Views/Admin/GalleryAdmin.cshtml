@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "GalleryAdmin";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+@using CoffeSite.Models;
+@model  List<Gallery>
+
+<h2 style="color:#000; font-weight:600;margin-bottom:50px;">
+    Galleries
+</h2>
+<div class="ABOUT">
+    <form action="~/Admin/GalleryAdmin" method="post">
+        <div class="form-group col-md-3">
+            <label>Photo</label>
+            <input name="GalleryPhoto" type="file" class="form-control" required autocomplete="on" />
+        </div>
+        <button type="submit" class="btn btn-success" style="margin-top:20px;">Change Button</button>
+    </form>
+</div>
+<style>
+    .ABOUT input {
+        width: 230px;
+        height: 100px;
+    }
+</style>
+

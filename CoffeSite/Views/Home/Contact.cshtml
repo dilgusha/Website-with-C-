@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+
+@using CoffeSite.Models;
+@model  List<Contact>
+
+<div class="contact" id="contact">
+    <h2 style="text-align: center; font-size: 50px;line-height: 30px;  color: #DB9A64; margin-bottom: 40px;">
+        Contact Us
+    </h2>
+
+    <div class="col-md-6">
+        <form action="~/Home/Contact" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter name" name="ContactName">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="ContactEmail">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Message:</label>
+                <textarea style="height: 150px; font-size: 12px;" class="form-control" id="textarea"
+                          name="ContactMessage" placeholder="Enter Message"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="privatebutton"
+                        style="border:1px solid;border-color: #DB9A64;border-radius: 2px; background-color: #fff; height: 40px; width: 100px;">
+                    Send
+                    Message
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="mu-contact-right">
+            <div class="mu-contact-widget">
+                <h3 style="color: #DB9A64;">Office Address</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia temporibus
+                    corporis ea non consequatur porro corrupti hic voluptatibus assumenda,
+                    doloribus.
+                </p>
+                <address>
+                    <a style="color:#000; text-decoration: none;" href="phone:">
+                        <p><i class="fa fa-phone"></i> (850) 457 6688</p>
+                    </a>
+                    <a style="color:#000; text-decoration: none;" href="contact@markups.io">
+                        <p><i class="fa fa-envelope-o"></i>contact@markups.io</p>
+                    </a>
+                    <p><i class="fa fa-map-marker"></i>368 St. Panama City, Florida, USA</p>
+                </address>
+            </div>
+            <div class="mu-contact-widget">
+                <h3 style="color: #DB9A64;">Open Hours</h3>
+                <address>
+                    <p><span>Monday - Friday</span> 9.00 am to 12 pm</p>
+                    <p><span>Saturday</span> 9.00 am to 10 pm</p>
+                    <p><span>Sunday</span> 10.00 am to 12 pm</p>
+                </address>
+            </div>
+        </div>
+    </div>
+</div>
+
